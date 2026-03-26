@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0a0f1e;
+  --bg2: #0d1426;
+  --bg3: #111827;
+  --bg4: #1a2235;
+  --cyan: #06b6d4;
+  --cyan2: #0891b2;
+  --cyan3: #164e63;
+  --neon: #22c55e;
+  --neon2: #16a34a;
+  --slate: #1e293b;
+  --slate2: #334155;
+  --slate3: #475569;
+  --text: #e2e8f0;
+  --text2: #94a3b8;
+  --text3: #64748b;
+  --red: #ef4444;
+  --yellow: #eab308;
+  --orange: #f97316;
+  --border: #1e3a4a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Courier New', Courier, monospace;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--slate2); border-radius: 2px; }
+
+/* Form inputs - Times New Roman per spec */
+input[type="email"],
+input[type="password"],
+input[type="text"],
+textarea {
+  font-family: "Times New Roman", Times, serif !important;
+}
+
+/* Buttons */
+.btn-primary {
+  background: #0e7490;
+  border: 1px solid var(--cyan2);
+  color: #fff;
+  padding: 7px 14px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-family: 'Courier New', monospace;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: background 0.15s;
+}
+.btn-primary:hover { background: var(--cyan); }
+
+.badge-red    { background: #2d0f0f; color: var(--red);    border: 1px solid #4a1515; }
+.badge-yellow { background: #2d2300; color: var(--yellow); border: 1px solid #4a3a00; }
+.badge-green  { background: #0f2d1a; color: var(--neon);   border: 1px solid #1a4a2a; }
+.badge-cyan   { background: var(--cyan3); color: var(--cyan); border: 1px solid #1a4a5a; }
+.badge-gray   { background: var(--slate); color: var(--text2); border: 1px solid var(--slate2); }
