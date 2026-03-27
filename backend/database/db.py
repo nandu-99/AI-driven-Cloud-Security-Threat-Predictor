@@ -2,7 +2,10 @@ import csv
 import os
 from typing import Any, Dict, List
 
-import pandas as pd
+try:
+    import pandas as pd
+except ImportError:
+    pd = None
 
 
 class DatasetRepository:
@@ -45,6 +48,9 @@ class DatasetRepository:
         path_xlsx = os.path.join(self.data_dir, "ldap.xlsx")
         path_csv = os.path.join(self.data_dir, "ldap.csv")
         if os.path.exists(path_xlsx):
+            if pd is None:
+                print("Warning: pandas not installed, skipping ldap.xlsx. Use ldap.csv if possible.")
+                return []
             frame = pd.read_excel(path_xlsx)
             return frame.fillna("").to_dict(orient="records")
         if os.path.exists(path_csv):

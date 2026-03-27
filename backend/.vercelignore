@@ -1,0 +1,14 @@
+database/logon.csv
+database/http.csv
+database/device.csv
+database/cleaned/
+database/ldap/
+database/insiders.csv
+database/ldap.xlsx
+data/
+*.csv
+*.xlsx
+__pycache__/
+.venv/
+node_modules/
+notebook/
