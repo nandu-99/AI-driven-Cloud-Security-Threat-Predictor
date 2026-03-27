@@ -1,11 +1,9 @@
 flask==3.0.3
 flask-cors==4.0.1
-numpy==1.26.4
 PyJWT==2.8.0
 gunicorn==22.0.0
-# Extra libraries removed for Vercel size constraints
-# pandas
-# openpyxl
-# scikit-learn
-# xgboost
-# tensorflow
+numpy==1.26.4
+pandas==2.2.2
+openpyxl==3.1.5
+scikit-learn==1.5.1
+xgboost==2.1.1
