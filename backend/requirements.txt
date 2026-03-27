@@ -2,9 +2,10 @@ flask==3.0.3
 flask-cors==4.0.1
 pandas==2.2.2
 openpyxl==3.1.5
-scikit-learn==1.5.1
-xgboost==2.1.1
-tensorflow==2.17.0
 numpy==1.26.4
 PyJWT==2.8.0
 gunicorn==22.0.0
+# Machine Learning libraries removed for Vercel compatibility (size constraints)
+# scikit-learn
+# xgboost
+# tensorflow
